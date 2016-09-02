@@ -1,0 +1,20 @@
+#login_div{
+    float: none;
+    margin: 0 auto;
+}
+
+html, body {
+  height: 100%;
+}
+#background{
+	background: url(../images/bg.jpg) no-repeat center center fixed;
+}
+#login_form{
+    text-align: center;
+	display:table-cell; 
+	vertical-align: middle;
+}
+.input-group{
+	float: none; 
+	margin: 0 auto;
+}

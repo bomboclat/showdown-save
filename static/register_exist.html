@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="files/js/jquery.min.js"></script>
+	<link href='files/bootstrap/css/bootstrap.min.css', rel='stylesheet'>
+	<link href='files/css/style.css', rel='stylesheet'>
+	<link href="files/css/bottoni.css" rel="stylesheet" type="text/css">
+</head>
+<body id="background">
+	<div class="col-md-4" style="height:100%;display:table;width: 100%;">
+		<form method="post" id="login_form">
+			<div class="modal-dialog" style="max-width: 400px;">
+				<div class="modal-content">
+					<p style="margin-top:50px;"><a href="/" style="font-size:30px;">Login/ </a><b style="font-size:30px;">Registrati</b></p>
+
+					<div class="input-group input-group-lg">
+						<input name ="user" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+					</div>
+					<div class="input-group input-group-lg">
+						<input name="pass" type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1" style="margin-top:15px;">
+					</div>
+					<input type="submit" name="register" class="btn btn-primary btn-lg raised" value="ok" style="margin-top:15px;" />                 
+					<div style="margin-top: 20px; margin-bottom:20px;">
+						<div class="alert alert-danger" role="alert" id="error_user_exist" style="max-width: 250px;float: none; margin: 0 auto;">
+							<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+							<span class="sr-only">Error:</span>
+							Username<b>  </b>is already exist, Please try another one!
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="files/js/jquery.min.js"></script>
+	<link href='files/bootstrap/css/bootstrap.min.css', rel='stylesheet'>
+	<link href='files/css/style.css', rel='stylesheet'>
+	<link href="files/css/bottoni.css" rel="stylesheet" type="text/css">
+</head>
+    <body id="background">
+        <div class="col-md-4" style="height:100%;display:table;width: 100%;">
+            <form method="post" id="login_form">
+                <div class="modal-dialog" style="max-width: 400px;">
+                  <div class="modal-content">
+                    <p style="font-size:30px; margin-top:50px;"><b>Pokèmon Showdown, team</b></p>
+                    <div class="input-group input-group-lg">
+                        <input name ="user" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" style="margin-bottom: 15px;">
+                    </div>
+                    <div class="input-group input-group-lg">
+                        <input name="pass" type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+                    </div>
+                    <input type="submit" name="login" class="btn btn-primary btn-lg raised" value="login" style="margin-top:15px;" />
+                    <a href="/register"><input type="button" class="btn btn-primary btn-lg raised" value="registrati" style="margin-top:15px; max-width: 160px;" /></a>
+                    <div style="margin-top:20px; margin-bottom:20px;">
+                        <div class="alert alert-danger" role="alert" id="avviso" style="visibility:hidden;max-width: 250px;  float: none; margin: 0 auto;">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            Email or password is incorrect!
+                        </div>
+                        <i>Created by Andrea Galletti</i>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

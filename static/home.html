@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="files/js/jquery.min.js"></script>
+	<link href='files/bootstrap/css/bootstrap.min.css', rel='stylesheet'>
+	<link href='files/css/style.css', rel='stylesheet'>
+	<link href="files/css/bottoni.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+<div class="col-md-12">
+<h1 style="text-align:center">Pokèmon Showdown, team</h1>
+<div class="col-md-3" style="margin-top: 50px;">
+</div>
+<div style="margin-top: 50px;">
+	<div class="col-md-4">
+        <form method="post">
+			<textarea name="text" id="user" type="text" placeholder="Incolla" class="form-control" style="margin-bottom:15px; height: 200px;"></textarea>
+			<input type="submit" name="invia" class="btn btn-primary btn-lg raised" value="invia" onclick="check()" style="margin-top:15px; font-size: 15px;" />
+		</form>
+	</div>
+	</div>
+	<div style="margin-top: 50px;">
+	<div class="col-md-4">
+        <textarea readonly name="text" id="prova" type="text" class="form-control" aria-describedby="basic-addon1" style="margin-bottom:15px; height: 200px;"></textarea>
+        <input type="button" id="copy-button" class="btn btn-primary btn-lg raised" data-clipboard-target="#prova"  value="copia" style="margin-top:15px; margin-bottom: 30px; font-size: 15px;" />
+	</div>
+	</div>
+	<form action="/logout=true" method="post">
+	<input type="submit" name="invia" class="btn btn-primary btn-lg raised" value="logout" onclick="check()" style="margin-top:15px; font-size: 15px;" />
+	</form>
+</div>
+</div>
+</body>
+<script src="files/js/clipboard.min.js"></script>
+<script type="text/javascript">
+        (function(){
+        new Clipboard('#copy-button');
+        })();
+	function check(){
+		var text = document.getElementById("prova").html;
+		if (text == '') {
+			alert('text is empty');
+		}};
+        $("#prova").load("/save");
+	</script>
+	</html>
