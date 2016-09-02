@@ -1,5 +1,5 @@
 # showdown-save
-Showdown-save is a system to save showdown teams.
+Showdown-save is a system to save **pokèmon showdown** teams.
 If you want to install the server program, run (for ex. in ubuntu):
 ```console
 $ git clone https://github.com/bomboclat/showdown-save.git
