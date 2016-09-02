@@ -3,9 +3,10 @@ Showdown-save is a system to save showdown teams.
 If you want to install the server program, run (for ex. in ubuntu):
 ```console
 $ git clone https://github.com/bomboclat/showdown-save.git
-$ cd showdown-sav
-```
-and
-```console
+$ cd showdown-save
 $ npm install
+```
+and run the app:
+```console
+$ sudo node home.js
 ```
