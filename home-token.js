@@ -140,8 +140,8 @@ process.on('uncaughtException', function (err) {
   console.log(err);
 });
 
-app.listen(1993, function () {
-  console.log('listening on port 1993!');
+app.listen(80, function () {
+  console.log('listening on port 80!');
 });
 
 setInterval(function() { 
