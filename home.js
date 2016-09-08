@@ -34,7 +34,7 @@ app.get('/home', function(req, res){
   db.all('SELECT * FROM save WHERE user=? AND pass=?;',[user, pass ] , function(err, table) {
   if(table !=""){
     db.get('SELECT save FROM save WHERE user=? AND pass=?;',[user, pass ] , function(err, table) {
-      res.render('home', {
+      res.render('home2', {
         save: table["save"],
         user: user
       });
@@ -119,7 +119,7 @@ app.post('/register', function (req, res) {
         res.redirect("/register");
       }
       else{
-        db.run('INSERT INTO save VALUES (NULL, ?, ?, "Non hai caricato ancora nessun salvataggio!");',[user, pass ] );
+        db.run('INSERT INTO save VALUES (NULL, ?, ?, "Non hai caricato ancora nessun salvataggio!", NULL, NULL);',[user, pass ] );
         res.redirect("/home");
       }
     });
@@ -158,7 +158,4 @@ app.listen(1993, function () {
   console.log('listening on port 1993!');
 });
 
-setInterval(function() { 
-  console.log("setInterval: It's been one second!"); 
-}, 1000);
 
