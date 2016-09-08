@@ -154,6 +154,11 @@ process.on('uncaughtException', function (err) {
   console.log(err);
 });
 
-app.listen(80, function () {
-  console.log('listening on port 80!');
+app.listen(1993, function () {
+  console.log('listening on port 1993!');
 });
+
+setInterval(function() { 
+  console.log("setInterval: It's been one second!"); 
+}, 1000);
+
