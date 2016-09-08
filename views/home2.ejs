@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="files/js/jquery.min.js"></script>
+	<link href='files/bootstrap/css/bootstrap.min.css', rel='stylesheet'>
+	<link href='files/css/style.css', rel='stylesheet'>
+	<link href="files/css/bottoni.css" rel="stylesheet" type="text/css">
+</head>
+    <body id="background">
+        <div class="col-md-4" style="height:100%;display:table;width: 100%;">
+            <div id="login_form">
+
+                <div class="modal-dialog" style="max-width: 400px;">
+                  <div class="modal-content">
+                    <p style="font-size:20px; margin-top:15px;"><b>Welcome <%= user %>!</b></p>
+                    <form method="post">
+                    <div class="input-group input-group-lg">
+						<textarea name="text" id="text" type="text" placeholder="Incolla il salvataggio quì!" class="form-control" style="margin-bottom:15px; height: 200px;"></textarea>
+
+                    </div>
+                    <input type="submit" name="invia" class="btn btn-primary btn-lg raised" value="invia" onclick="check()" style="margin-top:15px; font-size: 15px; margin-bottom: 15px" />
+                    </form>
+                    <div class="input-group input-group-lg">
+                        <textarea readonly name="text" id="prova" type="text" class="form-control" aria-describedby="basic-addon1" style="margin-bottom:15px; height: 200px;"><%= save %></textarea>
+                    </div>
+                    <div class="container-fluid">
+                            <input type="button" id="copy-button" class="btn btn-primary btn-lg raised" data-clipboard-target="#prova"  value="copia" style="margin-top:15px; margin-bottom: 30px; font-size: 15px;" />
+                            <a href="/logout=true"><input type="button" class="btn btn-primary btn-lg raised" value="logout" style="margin-top:15px; max-width: 160px;margin-bottom: 30px;" /></a>
+                            </div>
+                            <i>Created by Andrea Galletti</i>
+                    </div>
+                    
+                </div>
+            </div>
+    </div>
+</body>
+<script src="files/js/clipboard.min.js"></script>
+<script type="text/javascript">
+        (function(){
+        new Clipboard('#copy-button');
+        })();
+	function check(){
+		var text = document.getElementById("text").value;
+		if (text == '' || text == ' ') {
+			alert('text is empty');
+		}};
+</script>
+</html>
